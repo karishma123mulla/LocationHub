@@ -75,8 +75,8 @@ def weather_map_view(request):
 def fetch_weather_data(latitude, longitude):
     print(latitude,longitude)
     headers = {'User-Agent': 'fetch_weather_data/1.0 (karishmapathan1327@gmail.com)'}
-    # base_url =  f'https://api.weather.gov/points/{latitude},{longitude}'
-    base_url =  'https://api.weather.gov/points/39.7456,-97.0892'
+    base_url =  f'https://api.weather.gov/points/{latitude},{longitude}'
+    # base_url =  'https://api.weather.gov/points/39.7456,-97.0892'
     response = requests.get(base_url, headers=headers)
     print(response)
     if response.status_code == 200:
